@@ -1,5 +1,9 @@
 # Secure Machine Learning with SQL Server and Azure ML
 
+![](graphics/microsoftlogo.png)
+
+# Secure Machine Learning with SQL Server and Azure ML
+
 #### <i>A Microsoft Course from the Learn AI team</i>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
@@ -8,7 +12,7 @@
 
 Welcome to this Microsoft Solutions course on *Secure Machine Learning with SQL Server and Azure ML*. In this course, you'll learn how to implement a complete solution from start to finish using a defined Data Science process leveraging the Microsoft AI platform and SQL Server, and you'll also learn the skills you need to create other solutions on your own. This README.MD file explains how the course is laid out, what you will learn, and the technologies you will use in this solution.
 
-(You can view all of the [source files for this course on our github site. And you can find more courses there as well.](https://azure.github.io/learnAnalytics-public/))
+(You can view all of the [source files for this course on our github site. And you can find more courses there as well. Open this link in a new tab to find out more.](https://azure.github.io/learnAnalytics-public/))
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -20,19 +24,19 @@ In this course you'll learn how to take a model that was trained on another syst
 
 Businesses require critical equipment to be running at peak efficiency and utilization to realize their return on capital investments. These assets could range from aircraft engines, turbines, elevators, or industrial chillers - that cost millions - down to everyday appliances like photocopiers, coffee machines, or water coolers.
 
-By default, most businesses rely on corrective maintenance, where parts are replaced as and when they fail. Corrective maintenance ensures parts are used completely (therefore not wasting component life), but costs the business in downtime, labor, and unscheduled maintenance requirements (off hours, or inconvenient locations).
+By default, most businesses rely on *corrective* maintenance, where parts are replaced as and when they fail. Corrective maintenance ensures parts are used completely (therefore not wasting component life), but costs the business in downtime, labor, and unscheduled maintenance requirements (off hours, or inconvenient locations).
 
-At the next level, businesses practice preventive maintenance, where they determine the useful lifespan for a part, and maintain or replace it before a failure. Preventive maintenance avoids unscheduled and catastrophic failures. But the high costs of scheduled downtime, under-utilization of the component before its full lifetime of use, and labor still remain.
+At the next level, businesses practice *preventive* maintenance, where they determine the useful lifespan for a part, and maintain or replace it before a failure. Preventive maintenance avoids unscheduled and catastrophic failures. But the high costs of scheduled downtime, under-utilization of the component before its full lifetime of use, and labor still remain.
 
-The goal of predictive maintenance is to optimize the balance between corrective and preventative maintenance, by enabling just in time replacement of components. This approach only replaces those components when they are close to a failure. By extending component lifespans (compared to preventive maintenance) and reducing unscheduled maintenance and labor costs (over corrective maintenance), businesses can gain cost savings and competitive advantages.
+The goal of *predictive* maintenance (PdM) is to optimize the balance between corrective and preventative maintenance, by enabling just in time replacement of components. This approach only replaces those components when they are close to a failure. By extending component lifespans (compared to preventive maintenance) and reducing unscheduled maintenance and labor costs (over corrective maintenance), businesses can gain cost savings and competitive advantages.
 
 Businesses face high operational risk due to unexpected failures and have limited insight into the root cause of problems in complex systems. Some of the key business questions are:
 
-    Detect anomalies in equipment or system performance or functionality.
-    Predict whether an asset may fail in the near future.
-    Estimate the remaining useful life of an asset.
-    Identify the main causes of failure of an asset.
-    Identify what maintenance actions need to be done, by when, on an asset.
+    Detecting anomalies in equipment or system performance or functionality.
+    Predicting whether an asset may fail in the near future.
+    Estimating the remaining useful life of an asset.
+    Identifying the main causes of failure of an asset.
+    Identifying what maintenance actions need to be done, by when, on an asset.
 
 Typical goal statements from PdM are:
 
@@ -49,18 +53,21 @@ Typical goal statements from PdM are:
 
 These goal statements are the starting points for:
 
-    data scientists to analyze and solve specific predictive problems.
-    cloud architects and developers to put together an end to end solution.
+    Data Scientists, to analyze and solve specific predictive problems.
+    Solution Architects and Developers, to put together an end to end solution.
 
 <h3>Solution Diagram</h3>
+This solution uses a model to do predictive "Remaining Useful Life" (RUL) industry-standard predictions on an mechanical engine of almost any type, but it has many applications.
 
-<img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="./graphics/SQLML.png">
+In this diagram, the solution is divided into two sections: The model training, which is done in Azure, and the model operationalization, which is done on-premises. Both parts of the solution are kept under the management of the DevOps function in an organization.
+
+<img style="height: 600; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="./graphics/SQLML.png">
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h3>Sample Solution Output</h3>
 
-This solution uses a model to do predictive "Remaining Useful Life" (RUL) industry-standard predictions on an mechanical engine of almost any type, but it has many applications. For instance, when applied to an aircraft engine, a [Power BI report can indicate the specifics and location](https://docs.microsoft.com/en-us/azure/iot-accelerators/quickstart-predictive-maintenance-deploy) of a particular component that requires maintenance:
+ As an example, when applied to an aircraft engine, a [Power BI report can indicate the specifics and location](https://docs.microsoft.com/en-us/azure/iot-accelerators/quickstart-predictive-maintenance-deploy) of a particular component that requires maintenance:
 
 <img style="height: 300; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="./graphics/AirplanePowerBIReport.png">
 
@@ -103,11 +110,11 @@ This solution includes the following technologies - although you are not limited
   </tr>
   <tr>
     <td>SQL Server 2017 Machine Learning Services</td>
-    <td>Training/operationalize environment, secure data</td>
+    <td>Operationalize environment, secure data</td>
   </tr>
   <tr>
     <td>Azure ML SDK</td>
-    <td>CI/CD (Model Management)</td>
+    <td>AutoML, CI/CD (Model Management)</td>
   </tr>
   <tr>
     <td>Power BI</td>
@@ -118,8 +125,8 @@ This solution includes the following technologies - although you are not limited
     <td><i>(Optional if training done in SQL Server ML)</i></td>
   </tr>
   <tr>
-    <td><i>Azure ML Studio</i></td>
-    <td><i>(Optional if training done in Azure Studio Environment)</i></td>
+    <td><i>Jupyter Notebook with Python</i></td>
+    <td><i>Used for Model Training.</i></td>
   </tr>
 </table>
 
@@ -155,17 +162,20 @@ This solution uses a single industry for learning the tools and concepts, but it
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px; height: 30;" src="./graphics/pin.jpg">Before Taking this Course</h2>
 
-You must have a Microsoft Azure account with the ability to create assets. You will use a Windows Data Science Virtual Machine (DSVM) for this course, and optionally use Azure ML Studio if you wish to create an experiment prior to the model generation.
+You must have a Microsoft Azure account with the ability to create assets. You will use an Azure Data Science Virtual Machine (DSVM) for this course, and use Jupyter Notebooks running Python to create an experiment for the model generation.
 
 <h3>Skills</h3>
 
-This course expects that you understand data structures and working with SQL Server. This course does not expect the reader to have any prior data science knowledge. For the TDM content, basic knowledge of statistics and data science is helpful. Knowledge of SQL Server, Azure Data and AI services, Python, and JSON is recommended. AI techniques are implemented in Python packages. Solution templates are implemented using Azure services, development tools, and SDKs.
+This course expects that you understand data structures and working with SQL Server. This course does not expect the reader to have any prior data science knowledge. For the Data Science content, basic knowledge of statistics and data science is helpful. Knowledge of SQL Server, Azure Data and AI services, Python, and Jupyter Notebooks is recommended. AI techniques are implemented in Python packages. Solution templates are implemented using Azure services, development tools, and SDKs. You should have a basic understanding of working with the Microsoft Azure Platform.
 
-You'll make use of the Python and/or R languages in this course. If you are new to these, two sub-courses are included to cover the basics.
+If you are new to these, here are a few references you should complete prior to class:
 
--  [Python for the Data Professional](Python%20for%20Data%20Professionals/Python%20for%20Data%20Professionals/00%20Pre-Requisites.md)
+-  [Microsoft Azure](https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/)
+-  [Working with Jupyter Notebooks](https://notebooks.azure.com/Microsoft/libraries/samples)
+-  [Python Introduction](https://notebooks.azure.com/Microsoft/libraries/samples/html/Introduction%20to%20Python.ipynb)
+-  [Visual Studio Code](https://code.visualstudio.com/docs/getstarted/introvideos)
+-  [Microsoft SQL Server](https://docs.microsoft.com/en-us/sql/relational-databases/database-engine-tutorials?view=sql-server-2017)
 
--  [R for the Data Professional](R%20For%20Data%20Professionals/R%20For%20Data%20Professionals/00%20Pre-Requisites.md)
 
 <h3>Setup</h3>
 
