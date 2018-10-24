@@ -1,9 +1,5 @@
 # Secure Machine Learning with SQL Server and Azure ML
 
-![](graphics/microsoftlogo.png)
-
-# Secure Machine Learning with SQL Server and Azure ML
-
 #### <i>A Microsoft Course from the Learn AI team</i>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
